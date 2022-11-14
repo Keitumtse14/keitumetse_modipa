@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  place-items: center;
+  padding: 0rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: clamp(320px, 99vw, 65em);
+  border: hsla(210, 20%, 98%, 0.4) solid 1px;
+}
