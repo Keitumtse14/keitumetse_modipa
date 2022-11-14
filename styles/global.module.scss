@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: clamp(60em, 90%, 50rem);
+  background-color: hsl(203, 90%, 55%);
+}
