@@ -1,5 +1,6 @@
 $bg-color: hsl(240, 12%, 13%);
 $text-color: hsl(210, 20%, 98%);
+$font-family: serif;
 
 *,
 *::before,
@@ -14,4 +15,12 @@ $text-color: hsl(210, 20%, 98%);
 html,
 body {
   background-color: $bg-color;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+button {
+  background-color: #c03221;
 }

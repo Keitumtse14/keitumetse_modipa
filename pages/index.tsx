@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
+import styles from "styles/Home.module.scss";
 
 export default function Home() {
   return (
@@ -10,8 +10,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="styles">
-        <h1>Testing</h1>
+      <main className="">
+        <div>
+          <p>Keitumetse Modipa</p>
+        </div>
+        <div>
+          <h1> Software Engineer</h1>
+        </div>
+        <button className="button">VIEW MY PROJECTS</button>
       </main>
     </div>
   );
