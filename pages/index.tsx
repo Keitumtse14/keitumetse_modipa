@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="">
+      <section>
         <div>
           <p>Keitumetse Modipa</p>
         </div>
@@ -23,7 +23,7 @@ export default function Home() {
           <h2>PROJECTS</h2>
           <div>Projects div</div>
         </div>
-      </main>
+      </section>
     </div>
   );
 }
