@@ -18,6 +18,11 @@ export default function Home() {
           <h1> Software Engineer</h1>
         </div>
         <a className="button">VIEW MY PROJECTS</a>
+
+        <div className="projects">
+          <h2>PROJECTS</h2>
+          <div>Projects div</div>
+        </div>
       </main>
     </div>
   );
