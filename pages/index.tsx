@@ -17,7 +17,7 @@ export default function Home() {
         <div>
           <h1> Software Engineer</h1>
         </div>
-        <button className="button">VIEW MY PROJECTS</button>
+        <a className="button">VIEW MY PROJECTS</a>
       </main>
     </div>
   );
