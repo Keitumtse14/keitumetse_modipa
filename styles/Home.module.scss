@@ -1,8 +1,8 @@
 .container {
   display: grid;
-  place-items: center;
+  box-sizing: border-box;
   height: 100vh;
-  padding: 1rem;
-  margin-inline: auto;
+  padding: 0;
+  margin: 0;
   border: hsl(0, 0%, 95%) 0.1rem solid;
 }
