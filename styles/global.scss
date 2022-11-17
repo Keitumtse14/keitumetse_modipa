@@ -23,12 +23,20 @@ body {
   font-weight: 300;
 }
 
+h1 {
+  font-size: clamp(1rem, 1rem + 10vw, 128px);
+}
+
 h1,
 h2,
 h3,
 h4 {
   font-weight: 900;
   font-family: $font-family-headings;
+}
+
+p {
+  font-size: clamp(1rem, 1rem + 1vw, 36px);
 }
 
 .container {
