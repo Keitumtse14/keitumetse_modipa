@@ -19,9 +19,20 @@ $font-family-headings: "Inter", sans-serif;
 body {
   background-color: $backgound-color;
   color: $text-color;
+  font-family: $font-family-body;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+  font-family: $font-family-headings;
 }
 
 .container {
-  padding-inline: 1em;
-  max-width: 60em;
+  width: min(90%, 70.5rem);
+  border: 1px hsl(120, 50%, 49%) solid;
+  margin-inline: auto;
 }
