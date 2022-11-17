@@ -1,8 +1,8 @@
 .container {
   display: grid;
   box-sizing: border-box;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
+  height: 100%;
+  padding: calc(1em + 10vw);
+  margin-inline: auto;
   border: hsl(0, 0%, 95%) 0.1rem solid;
 }

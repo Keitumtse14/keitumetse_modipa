@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "styles/Home.module.scss";
+import styles from "/styles/Home.module.scss";
 
 export default function Home() {
   return (
@@ -11,12 +11,12 @@ export default function Home() {
       </Head>
 
       <section>
-        <div>
+        <>
           <p>Keitumetse Modipa</p>
-        </div>
-        <div>
+        </>
+        <>
           <h1> Software Engineer</h1>
-        </div>
+        </>
         <a className="button">VIEW MY PROJECTS</a>
 
         <div className="projects">

@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  "baseUrl": ".",
+  "basePath": "/",
 }
 
 module.exports = nextConfig
