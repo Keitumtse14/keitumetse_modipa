@@ -10,18 +10,14 @@ export default function Home() {
       </Head>
 
       <section>
-        <>
-          <p>Keitumetse Modipa</p>
-        </>
-        <>
-          <h1> Software Engineer</h1>
-        </>
+        <p>Keitumetse Modipa</p>
+        <h1> Software Engineer</h1>
         <a className="button">VIEW MY PROJECTS</a>
+      </section>
 
-        <div className="projects">
-          <h2>PROJECTS</h2>
-          <div>Projects div</div>
-        </div>
+      <section className="projects">
+        <h2>PROJECTS</h2>
+        <div className="projects-container">Projects div</div>
       </section>
     </div>
   );

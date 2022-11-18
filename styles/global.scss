@@ -26,7 +26,6 @@ body {
 h1 {
   font-size: clamp(1rem, 1rem + 10vw, 128px);
   line-height: 1;
-  margin-block: 1em;
 }
 
 h1,
@@ -35,6 +34,7 @@ h3,
 h4 {
   font-weight: 900;
   font-family: $font-family-headings;
+  margin-block: 1em;
 }
 
 p {
@@ -43,12 +43,21 @@ p {
 
 .container {
   width: min(90%, 70.5rem);
-  border: 1px hsl(120, 50%, 49%) solid;
+  border: 1px hsl(177, 70%, 41%) solid;
   margin-inline: auto;
 }
 
 .button {
   background-color: $button-color;
-  padding: 1em;
+  padding: min(0.5em, 10vw);
+  font-size: clamp(0.7rem, 0.7rem + 1vw, 36px);
   border-radius: 15px;
+}
+
+.projects {
+  margin-top: 3rem;
+}
+
+.projects.container {
+  aspect-ratio: 16/9;
 }
