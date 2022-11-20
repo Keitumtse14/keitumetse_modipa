@@ -22,19 +22,32 @@ body {
   font-family: $font-family-body;
   font-weight: 300;
 }
+img {
+  display: inline-block;
+  aspect-ratio: 1/1;
+}
 
 h1 {
   font-size: clamp(1rem, 1rem + 10vw, 128px);
   line-height: 1;
+  margin-bottom: 0.3em;
+  margin-top: clamp(0.5rem, 0.5rem + 10vw, 5rem);
+}
+
+h2 {
+  margin-block: 5em;
+  font-weight: 900;
+  font-family: $font-family-headings;
 }
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-weight: 900;
   font-family: $font-family-headings;
-  margin-block: 1em;
 }
 
 p {
@@ -42,14 +55,14 @@ p {
 }
 
 .container {
+  padding-top: clamp(3em, 1em + 10vh, 10em);
   width: min(90%, 70.5rem);
-  border: 1px hsl(177, 70%, 41%) solid;
   margin-inline: auto;
 }
 
 .button {
   background-color: $button-color;
-  padding: min(0.5em, 10vw);
+  padding: min(0.5em, 5vw);
   font-size: clamp(0.7rem, 0.7rem + 1vw, 36px);
   border-radius: 15px;
 }
@@ -58,6 +71,16 @@ p {
   margin-top: 3rem;
 }
 
-.projects.container {
-  aspect-ratio: 16/9;
+.projects-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  flex: 0 1 250px;
+  margin-bottom: 10em;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.projects-container > img {
+  border-radius: 15px;
 }

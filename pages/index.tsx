@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Image from "next/image";
+import eskomApp from "public/derrick-brooks-eUTEPwq81C4-unsplash.jpg";
 
 export default function Home() {
   return (
@@ -8,8 +10,7 @@ export default function Home() {
         <meta name="description" content="My projects" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <section>
+      <section className="hero">
         <p>Keitumetse Modipa</p>
         <h1> Software Engineer</h1>
         <a className="button">VIEW MY PROJECTS</a>
@@ -17,7 +18,12 @@ export default function Home() {
 
       <section className="projects">
         <h2>PROJECTS</h2>
-        <div className="projects-container">Projects div</div>
+        <div className="projects-container">
+          <Image src={eskomApp} alt="" width="250" height="250" />
+          <Image src={eskomApp} alt="" width="250" height="250" />
+          <Image src={eskomApp} alt="" width="250" height="250" />
+          <Image src={eskomApp} alt="" width="250" height="250" />
+        </div>
       </section>
     </div>
   );
