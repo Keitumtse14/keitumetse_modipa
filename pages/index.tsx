@@ -23,6 +23,12 @@ export default function Home() {
           <Image src={eskomApp} alt="" width="250" height="250" />
           <Image src={eskomApp} alt="" width="250" height="250" />
           <Image src={eskomApp} alt="" width="250" height="250" />
+          <Image src={eskomApp} alt="" width="250" height="250" />
+          <Image src={eskomApp} alt="" width="250" height="250" />
+          <Image src={eskomApp} alt="" width="250" height="250" />
+          <Image src={eskomApp} alt="" width="250" height="250" />
+          <Image src={eskomApp} alt="" width="250" height="250" />
+          <Image src={eskomApp} alt="" width="250" height="250" />
         </div>
       </section>
     </div>
