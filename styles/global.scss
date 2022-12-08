@@ -30,13 +30,11 @@ img {
 h1 {
   font-size: clamp(1rem, 1rem + 10vw, 128px);
   line-height: 1;
-  margin-top: clamp(0.5rem, 0.5rem + 10vw, 5rem);
-  margin-bottom: clamp(0.5rem, 0.5rem + 10vw, 5rem);
+  margin-block: clamp(0.5rem, 0.5rem + 10vw, 5rem);
 }
 
 h2 {
   margin-block: 5em;
-  font-weight: 900;
   font-family: $font-family-headings;
 }
 
@@ -62,7 +60,7 @@ p {
 
 .button {
   background-color: $button-color;
-  padding: min(0.5em, 5vw);
+  padding: min(0.5em, 100vw);
   font-size: clamp(0.7rem, 0.7rem + 1vw, 36px);
   border-radius: 15px;
 }
@@ -74,7 +72,7 @@ p {
 .projects-container {
   display: flex;
   justify-content: space-between;
-  gap: 1em;
+  gap: 1.5em;
   flex: 0 1 250px;
   margin-bottom: 10em;
   overflow-x: scroll;
@@ -83,4 +81,16 @@ p {
 
 .projects-container > img {
   border-radius: 15px;
+}
+
+.button:link {
+  color: $text-color;
+}
+
+.button:visited {
+  color: $text-color;
+}
+
+.button:hover {
+  cursor: pointer;
 }

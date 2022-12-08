@@ -18,7 +18,7 @@ export default function Home() {
 
       <section className="projects">
         <h2>PROJECTS</h2>
-        <div className="projects-container">
+        <div className="projects-container #projects">
           <Image src={eskomApp} alt="" width="250" height="250" />
           <Image src={eskomApp} alt="" width="250" height="250" />
           <Image src={eskomApp} alt="" width="250" height="250" />
