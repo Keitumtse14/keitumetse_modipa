@@ -18,8 +18,8 @@ export default function Home() {
       <section className="projects">
         <h2 >PROJECTS</h2>
         <div className="projects-container">
-          <a href="https://dsa-app-tau.vercel.app/" target="_blank" rel="noreferrer noopener"><Image src={DSA_App} alt="" width="250" height="250" /></a>
-          <a><Image src={Eskom_App} alt="" width="250" height="250" /></a>
+          <a href="https://dsa-app-tau.vercel.app/" target="_blank" rel="noreferrer noopener"> <Image src={DSA_App} alt="Thumnail of DSA-App" width="250" height="250" /></a>
+          <a href="https://github.com/Keitumtse14/proxy" target="_blank" rel="noreferrer noopener"> <Image src={Eskom_App} alt="Thumnail of Rolling blackouts app" width="250" height="250" /></a>
         </div>
       </section>
     </div>
