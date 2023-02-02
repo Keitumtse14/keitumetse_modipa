@@ -3,7 +3,6 @@
 
 $backgound-color: hsl(240, 12%, 13%);
 $text-color: hsl(210, 20%, 98%);
-$button-color: hsl(345, 66%, 47%);
 
 $font-family-body: "Be Vietnam Pro", sans-serif;
 $font-family-headings: "Inter", sans-serif;
@@ -22,20 +21,23 @@ body {
   font-family: $font-family-body;
   font-weight: 300;
 }
+
 img {
-  display: inline-block;
   aspect-ratio: 1/1;
+  display: block;
 }
 
 h1 {
-  font-size: clamp(1rem, 1rem + 10vw, 128px);
+  font-size: clamp(0.5rem, 0.5rem + 10vw, 5rem);
+  max-width: 5ch;
   line-height: 1;
-  margin-block: clamp(0.5rem, 0.5rem + 10vw, 5rem);
+  text-align: center;
 }
 
 h2 {
-  margin-block: 5em;
-  font-family: $font-family-headings;
+  margin-block: clamp(8rem, 8rem + 5vh, 7rem);
+  font-size: clamp(0.1rem, 0.1rem + 6vw, 2rem);
+  text-align: center;
 }
 
 h1,
@@ -49,48 +51,42 @@ h6 {
 }
 
 p {
-  font-size: clamp(1rem, 1rem + 1vw, 36px);
+  font-size: clamp(1rem, 1rem + 1vw, 2rem);
 }
 
 .container {
-  padding-top: clamp(3em, 1em + 10vh, 10em);
+  padding-top: clamp(2em, 2em + 10vh, 10em);
   width: min(90%, 70.5rem);
   margin-inline: auto;
 }
 
-.button {
-  background-color: $button-color;
-  padding: min(0.5em, 100vw);
-  font-size: clamp(0.7rem, 0.7rem + 1vw, 36px);
-  border-radius: 15px;
-}
-
-.projects {
-  margin-top: 3rem;
-}
-
 .projects-container {
   display: flex;
-  justify-content: space-between;
-  gap: 1.5em;
-  flex: 0 1 250px;
+  flex-direction: column;
+  gap: 2rem;
   margin-bottom: 10em;
   overflow-x: scroll;
-  white-space: nowrap;
+  white-space: pre-line;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  & ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-.projects-container > img {
-  border-radius: 15px;
-}
-
-.button:link {
-  color: $text-color;
-}
-
-.button:visited {
-  color: $text-color;
-}
-
-.button:hover {
-  cursor: pointer;
+@media (min-width: 650px) {
+  .projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1em;
+    margin-bottom: 10em;
+    overflow-x: scroll;
+    white-space: pre-line;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
