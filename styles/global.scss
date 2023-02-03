@@ -72,6 +72,9 @@ p {
   & ::-webkit-scrollbar {
     display: none;
   }
+  & a {
+    margin-inline: auto;
+  }
 }
 
 @media (min-width: 650px) {
