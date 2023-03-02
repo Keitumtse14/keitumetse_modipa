@@ -29,7 +29,7 @@ export default function Home() {
           </div>
           <div>
             <div className=" ">Weather app (in progress) </div>
-            <a href="https://dsa-app-tau.vercel.app/" target="_blank" rel="noreferrer noopener"> <Image src={Weather_App} alt="Thumbnail of Weather App" width="250" height="250" /></a>
+            <a href="#" target="_blank" rel="noreferrer noopener"> <Image src={Weather_App} alt="Thumbnail of Weather App" width="250" height="250" /></a>
           </div>
         </div>
       </section>
