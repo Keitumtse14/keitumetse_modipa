@@ -25,6 +25,8 @@ body {
 img {
   aspect-ratio: 1/1;
   display: block;
+  border-radius: .3rem;
+  margin-top: clamp(.5rem, 1rem + 5vw, 2rem);
 }
 
 h1 {
@@ -62,34 +64,40 @@ p {
 
 .projects-container {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: clamp(2rem, 2rem + 5vw, 4rem);
   margin-bottom: 10em;
   overflow-x: scroll;
   white-space: pre-line;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+
+  /* Firefox */
   & ::-webkit-scrollbar {
     display: none;
   }
-  & a {
-    margin-inline: auto;
+
+  & div {
+    text-align: center;
+    place-self: center;
   }
+
 }
 
 @media (min-width: 650px) {
   .projects-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 1em;
-    margin-bottom: 10em;
+    margin-bottom: 10rem;
     overflow-x: scroll;
     white-space: pre-line;
+
     &::-webkit-scrollbar {
       display: none;
     }
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
 }
