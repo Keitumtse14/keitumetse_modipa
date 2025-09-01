@@ -3,7 +3,7 @@
 
 $backgound-color: hsl(240, 12%, 13%);
 $text-color: hsl(210, 20%, 98%);
-
+$accent-color: hsl(345, 66%, 47%);
 $font-family-body: "Be Vietnam Pro", sans-serif;
 $font-family-headings: "Inter", sans-serif;
 
@@ -34,6 +34,7 @@ h1 {
   max-width: 5ch;
   line-height: 1;
   text-align: center;
+  margin-top: 2.9rem;
 }
 
 h2 {
@@ -100,4 +101,70 @@ p {
     scrollbar-width: none;
     /* Firefox */
   }
+}
+
+.line {
+  width: 240px;
+  height: 3px;
+  background-color: #fff;
+  margin-top: 10px;
+  margin-left: 23px;
+}
+
+.email-section {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 95px;
+  right: 0;
+}
+
+.email {
+  text-align: right;
+}
+
+.role {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+.socials-line {
+  width: 3px;
+  height: 150px;
+  background-color: #fff;
+  margin-inline: auto;
+  margin-top: 30px;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 248px;
+}
+
+.name-role {
+  margin-top: 150px;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.email-link {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.view-projects {
+
+  background-color: $accent-color;
+  padding: .8rem 1.6rem;
+  border-color: $accent-color;
+  border-style: none;
+  border-radius: 5px;
+  margin-top: 50px;
 }
