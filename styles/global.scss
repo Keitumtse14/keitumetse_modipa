@@ -24,6 +24,10 @@ $font-headings: "Inter", sans-serif;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ------------------------------
    Typography
 ------------------------------ */
@@ -53,7 +57,7 @@ h1 {
 }
 
 h2 {
-  margin-block: clamp(8rem, 8rem + 5vh, 7rem);
+  margin-bottom: 0;
   font-size: clamp(1rem, 1rem + 1.5vw, 4rem);
 }
 
@@ -108,6 +112,7 @@ p {
 
 .name-role {
   margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .role {
@@ -130,11 +135,11 @@ p {
 ------------------------------ */
 .projects-container {
   display: flex;
-  gap: clamp(2rem, 2rem + 5vw, 4rem);
-  margin-bottom: 10em;
+  gap: clamp(2rem, 1rem + 5vw, 5rem);
+  // margin-bottom: 5 em;
   overflow-x: scroll;
   white-space: pre-line;
-
+  position: relative;
   /* Hide scrollbars */
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -166,7 +171,54 @@ img {
   padding: 0.8rem 1.6rem;
   border: none;
   border-radius: 5px;
-  margin-top: 40px;
   color: $text-color;
+  text-decoration: none;
   cursor: pointer;
+  position: relative;
+}
+
+.email-section-projects {
+  display: flex;
+  gap: 1rem;
+  // position: absolute;
+  // left: 0;
+
+  .line {
+    margin-left: 0;
+  }
+}
+
+.email-link-projects {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.socials-projects {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  margin-left: 30px
+}
+
+.projects .projects-socials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  // top: 0;
+
+}
+
+.projects-socials-line {
+  width: 150px;
+  height: 3px;
+  background-color: $text-color;
+  margin-inline: auto;
+  margin-top: 30px;
+}
+
+.projects-container {
+  min-height: 100vh;
+
 }

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { motion } from "motion/react"
 
 export default function Home() {
   const projects = [
@@ -48,7 +49,10 @@ export default function Home() {
           <h1>Keitumetse Modipa</h1>
         </div>
 
-        <button className="view-projects">View My Projects</button>
+        {/* Smooth scroll button */}
+        <a href="#projects" className="view-projects">
+          View My Projects
+        </a>
 
         <div className="socials">
           <Image
@@ -77,8 +81,33 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="projects">
+      <section id="projects" className="projects">
+        <div className="projects-socials">
+          <Image
+            width={40}
+            height={40}
+            src="/linkedin-svgrepo-com 1.svg"
+            alt="LinkedIn"
+            className="svg-size"
+          />
+          <Image
+            width={40}
+            height={40}
+            src="/github-outline-fill-svgrepo-com 1.svg"
+            alt="GitHub"
+            className="svg-size"
+          />
+          <Image
+            width={40}
+            height={40}
+            src="/facebook.svg"
+            alt="Facebook"
+            className="svg-size"
+          />
+          <div className="projects-socials-line"></div>
+        </div>
         <h2>Projects</h2>
+
         <div className="projects-container">
           {projects.map((project) => (
             <div key={project.name}>
@@ -96,7 +125,17 @@ export default function Home() {
                 />
               </a>
             </div>
+
           ))}
+        </div>
+        <div className="email-section-projects">
+          <div className="line"></div>
+          <a
+            className="email-link-projects"
+            href="mailto:modipakeitumetse14@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
+          >
+            modipakeitumetse14@gmail.com
+          </a>
         </div>
       </section>
     </div>
