@@ -82,30 +82,33 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className="projects">
         <div className="projects-container">
-          <header className="projects-header"><h2>Projects</h2><div className="projects-socials">
-            <Image
-              width={40}
-              height={40}
-              src="/linkedin-svgrepo-com 1.svg"
-              alt="LinkedIn"
-              className="svg-size"
-            />
-            <Image
-              width={40}
-              height={40}
-              src="/github-outline-fill-svgrepo-com 1.svg"
-              alt="GitHub"
-              className="svg-size"
-            />
-            <Image
-              width={40}
-              height={40}
-              src="/facebook.svg"
-              alt="Facebook"
-              className="svg-size"
-            />
-            <div className="projects-socials-line"></div>
-          </div></header>
+          <header className="projects-header">
+            <h2>Projects</h2>
+            <div className="projects-socials">
+              <Image
+                width={40}
+                height={40}
+                src="/linkedin-svgrepo-com 1.svg"
+                alt="LinkedIn"
+                className="svg-size"
+              />
+              <Image
+                width={40}
+                height={40}
+                src="/github-outline-fill-svgrepo-com 1.svg"
+                alt="GitHub"
+                className="svg-size"
+              />
+              <Image
+                width={40}
+                height={40}
+                src="/facebook.svg"
+                alt="Facebook"
+                className="svg-size"
+              />
+              <div className="projects-socials-line"></div>
+            </div>
+          </header>
 
           <div className="projects-list">
             {projects.map((project) => (
@@ -126,19 +129,20 @@ export default function Home() {
               </div>
 
             ))}
-            <div className="email-section-projects">
-              <div className="line"></div>
-              <a
-                className="email-link-projects"
-                href="mailto:modipakeitumetse14@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
-              >
-                modipakeitumetse14@gmail.com
-              </a>
-            </div>
+          </div>
+          <div className="email-section-projects">
+            <div className="line"></div>
+            <a
+              className="email-link-projects"
+              href="mailto:modipakeitumetse14@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
+            >
+              modipakeitumetse14@gmail.com
+            </a>
           </div>
         </div>
 
       </section>
+
     </div>
   );
 }

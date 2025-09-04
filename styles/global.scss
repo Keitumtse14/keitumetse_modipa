@@ -175,12 +175,14 @@ img {
 .email-section-projects {
   display: flex;
   gap: 1rem;
-  // position: absolute;
-  // left: 0;
-  bottom: 0;
+  position: absolute;
+  left: 0;
+  margin-top: 7rem;
+
 
   .line {
     margin-left: 0;
+    width: 196px;
   }
 }
 
@@ -191,7 +193,9 @@ img {
 
 .projects-socials {
   display: flex;
-
+  gap: 1rem;
+  position: absolute;
+  right: 0;
 }
 
 .projects-socials-line {
@@ -205,6 +209,7 @@ img {
 .projects-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: clamp(10rem, 2rem + 5vw, 30rem);
 }
 
 .projects-container {
