@@ -133,13 +133,11 @@ p {
 /* ------------------------------
    Projects Section
 ------------------------------ */
-.projects-container {
+.projects-list {
   display: flex;
   gap: clamp(2rem, 1rem + 5vw, 5rem);
-  // margin-bottom: 5 em;
   overflow-x: scroll;
   white-space: pre-line;
-  position: relative;
   /* Hide scrollbars */
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -152,7 +150,6 @@ p {
 
   & div {
     text-align: center;
-    place-self: center;
   }
 }
 
@@ -163,7 +160,6 @@ img {
   aspect-ratio: 1/1;
   display: block;
   border-radius: 0.3rem;
-  margin-top: clamp(0.5rem, 1rem + 5vw, 2rem);
 }
 
 .view-projects {
@@ -174,7 +170,6 @@ img {
   color: $text-color;
   text-decoration: none;
   cursor: pointer;
-  position: relative;
 }
 
 .email-section-projects {
@@ -182,6 +177,7 @@ img {
   gap: 1rem;
   // position: absolute;
   // left: 0;
+  bottom: 0;
 
   .line {
     margin-left: 0;
@@ -193,20 +189,8 @@ img {
   text-decoration: none;
 }
 
-.socials-projects {
+.projects-socials {
   display: flex;
-  align-items: flex-end;
-  position: absolute;
-  margin-left: 30px
-}
-
-.projects .projects-socials {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  // top: 0;
 
 }
 
@@ -214,11 +198,15 @@ img {
   width: 150px;
   height: 3px;
   background-color: $text-color;
-  margin-inline: auto;
-  margin-top: 30px;
+  margin-block: auto;
+}
+
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .projects-container {
   min-height: 100vh;
-
 }

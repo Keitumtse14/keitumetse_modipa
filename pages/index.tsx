@@ -81,61 +81,63 @@ export default function Home() {
 
       {/* Projects Section */}
       <section id="projects" className="projects">
-        <div className="projects-socials">
-          <Image
-            width={40}
-            height={40}
-            src="/linkedin-svgrepo-com 1.svg"
-            alt="LinkedIn"
-            className="svg-size"
-          />
-          <Image
-            width={40}
-            height={40}
-            src="/github-outline-fill-svgrepo-com 1.svg"
-            alt="GitHub"
-            className="svg-size"
-          />
-          <Image
-            width={40}
-            height={40}
-            src="/facebook.svg"
-            alt="Facebook"
-            className="svg-size"
-          />
-          <div className="projects-socials-line"></div>
-        </div>
-        <h2>Projects</h2>
-
         <div className="projects-container">
-          {projects.map((project) => (
-            <div key={project.name}>
-              <p className="project-tooltip">{project.name}</p>
+          <header className="projects-header"><h2>Projects</h2><div className="projects-socials">
+            <Image
+              width={40}
+              height={40}
+              src="/linkedin-svgrepo-com 1.svg"
+              alt="LinkedIn"
+              className="svg-size"
+            />
+            <Image
+              width={40}
+              height={40}
+              src="/github-outline-fill-svgrepo-com 1.svg"
+              alt="GitHub"
+              className="svg-size"
+            />
+            <Image
+              width={40}
+              height={40}
+              src="/facebook.svg"
+              alt="Facebook"
+              className="svg-size"
+            />
+            <div className="projects-socials-line"></div>
+          </div></header>
+
+          <div className="projects-list">
+            {projects.map((project) => (
+              <div key={project.name}>
+                <p className="project-tooltip">{project.name}</p>
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <Image
+                    src={project.src}
+                    alt={project.alt}
+                    width={250}
+                    height={250}
+                  />
+                </a>
+              </div>
+
+            ))}
+            <div className="email-section-projects">
+              <div className="line"></div>
               <a
-                href={project.href}
-                target="_blank"
-                rel="noreferrer noopener"
+                className="email-link-projects"
+                href="mailto:modipakeitumetse14@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
               >
-                <Image
-                  src={project.src}
-                  alt={project.alt}
-                  width={250}
-                  height={250}
-                />
+                modipakeitumetse14@gmail.com
               </a>
             </div>
+          </div>
+        </div>
 
-          ))}
-        </div>
-        <div className="email-section-projects">
-          <div className="line"></div>
-          <a
-            className="email-link-projects"
-            href="mailto:modipakeitumetse14@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
-          >
-            modipakeitumetse14@gmail.com
-          </a>
-        </div>
       </section>
     </div>
   );
