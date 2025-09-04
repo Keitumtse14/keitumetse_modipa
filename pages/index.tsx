@@ -17,7 +17,7 @@ export default function Home() {
     },
     {
       name: "Weather App (in progress)",
-      href: "#",
+      href: "javascript:void(0)",
       src: "/Weather-App.png",
       alt: "Thumbnail of Weather App",
     },
@@ -54,27 +54,46 @@ export default function Home() {
         </a>
 
         <div className="socials">
-          <Image
-            width={40}
-            height={40}
-            src="/linkedin-svgrepo-com 1.svg"
-            alt="LinkedIn"
-            className="svg-size"
-          />
-          <Image
-            width={40}
-            height={40}
-            src="/github-outline-fill-svgrepo-com 1.svg"
-            alt="GitHub"
-            className="svg-size"
-          />
-          <Image
-            width={40}
-            height={40}
-            src="/facebook.svg"
-            alt="Facebook"
-            className="svg-size"
-          />
+          <a
+            href="https://www.linkedin.com/in/keitumetse-modipa-6b7325264/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              width={40}
+              height={40}
+              src="/linkedin-svgrepo-com 1.svg"
+              alt="LinkedIn"
+              className="svg-size"
+            />
+          </a>
+
+          <a
+            href="https://github.com/Keitumtse14"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              width={40}
+              height={40}
+              src="/github-outline-fill-svgrepo-com 1.svg"
+              alt="GitHub"
+              className="svg-size"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100086403442409"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              width={40}
+              height={40}
+              src="/facebook.svg"
+              alt="Facebook"
+              className="svg-size"
+            />
+          </a>
           <div className="socials-line"></div>
         </div>
       </section>
@@ -114,18 +133,29 @@ export default function Home() {
             {projects.map((project) => (
               <div key={project.name}>
                 <p className="project-tooltip">{project.name}</p>
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <Image
-                    src={project.src}
-                    alt={project.alt}
-                    width={250}
-                    height={250}
-                  />
-                </a>
+                {project.name === "Weather App (in progress)" ? (
+                  <span style={{ cursor: "not-allowed", display: "inline-block" }}>
+                    <Image
+                      src={project.src}
+                      alt={project.alt}
+                      width={250}
+                      height={250}
+                    />
+                  </span>
+                ) : (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <Image
+                      src={project.src}
+                      alt={project.alt}
+                      width={250}
+                      height={250}
+                    />
+                  </a>
+                )}
               </div>
 
             ))}
