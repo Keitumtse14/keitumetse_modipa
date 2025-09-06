@@ -104,27 +104,45 @@ export default function Home() {
           <header className="projects-header">
             <h2>Projects</h2>
             <div className="projects-socials">
-              <Image
-                width={40}
-                height={40}
-                src="/linkedin-svgrepo-com 1.svg"
-                alt="LinkedIn"
-                className="svg-size"
-              />
-              <Image
-                width={40}
-                height={40}
-                src="/github-outline-fill-svgrepo-com 1.svg"
-                alt="GitHub"
-                className="svg-size"
-              />
-              <Image
-                width={40}
-                height={40}
-                src="/facebook.svg"
-                alt="Facebook"
-                className="svg-size"
-              />
+              <a
+                href="https://www.linkedin.com/in/keitumetse-modipa-6b7325264/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  width={40}
+                  height={40}
+                  src="/linkedin-svgrepo-com 1.svg"
+                  alt="LinkedIn"
+                  className="svg-size"
+                />
+              </a>
+              <a
+                href="https://github.com/Keitumtse14"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  width={40}
+                  height={40}
+                  src="/github-outline-fill-svgrepo-com 1.svg"
+                  alt="GitHub"
+                  className="svg-size"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100086403442409"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  width={40}
+                  height={40}
+                  src="/facebook.svg"
+                  alt="Facebook"
+                  className="svg-size"
+                />
+              </a>
               <div className="projects-socials-line"></div>
             </div>
           </header>
