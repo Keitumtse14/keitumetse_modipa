@@ -1,17 +1,20 @@
 /* ------------------------------
    Imports (Google Fonts)
 ------------------------------ */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 /* ------------------------------
    Variables
 ------------------------------ */
-$background-color: hsl(240, 12%, 13%);
+$background-color: hsl(218, 58%, 4%);
 $text-color: hsl(210, 20%, 98%);
 $accent-color: hsl(345, 66%, 47%);
-$font-body: "Be Vietnam Pro", sans-serif;
-$font-headings: "Inter", sans-serif;
+
+$font-body: "Noto Sans", sans-serif;
+$font-headings: "Be Vietnam Pro", sans-serif;
+
 
 /* ------------------------------
    Global Reset
@@ -28,16 +31,17 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ------------------------------
-   Typography
------------------------------- */
 body {
   background-color: $background-color;
   color: $text-color;
   font-family: $font-body;
-  font-weight: 300;
+  font-weight: 400;
 }
 
+
+/* ------------------------------
+   Typography
+------------------------------ */
 h1,
 h2,
 h3,
@@ -45,24 +49,21 @@ h4,
 h5,
 h6 {
   font-family: $font-headings;
-  font-weight: 900;
 }
 
 h1 {
-  font-size: clamp(0.5rem, 0.5rem + 10vw, 5rem);
-  max-width: 5ch;
-  line-height: 1;
-  text-align: center;
-  margin-top: 2.9rem;
+  font-size: clamp(3rem, 1rem + 7vw, 5rem);
+  margin-top: 1rem;
 }
 
 h2 {
-  font-size: clamp(1rem, 1rem + 1.5vw, 4rem);
+  font-size: clamp(1.25rem, 1rem + 0.8vw, 2rem);
 }
 
 p {
-  font-size: clamp(1rem, 1rem + .2vw, 2rem);
+  font-size: clamp(1rem, 1rem + 0.2vw, 1.25rem);
 }
+
 
 /* ------------------------------
    Layout Utilities
@@ -70,35 +71,37 @@ p {
 .container {
   width: min(90%, 70.5rem);
   margin-inline: auto;
-  padding-top: clamp(2em, 2em + 10vh, 10em);
+  padding-top: clamp(2rem, 2rem + 10vh, 10rem);
 }
 
 .line {
   width: 240px;
-  height: 3px;
+  height: 2px;
   background-color: $text-color;
   margin-top: 10px;
   margin-left: 23px;
 }
 
 .socials-line {
-  width: 3px;
+  width: 2px;
   height: 150px;
   background-color: $text-color;
   margin-inline: auto;
   margin-top: 30px;
 }
 
+
 /* ------------------------------
    Hero Section
 ------------------------------ */
 .hero {
-  height: 100vh;
+  min-height: 100svh;
 }
 
 .email-section {
   display: flex;
   justify-content: flex-end;
+
   position: absolute;
   top: 95px;
   right: 0;
@@ -107,95 +110,205 @@ p {
 .email-link {
   color: $text-color;
   text-decoration: none;
+  transition: color 180ms ease, opacity 180ms ease;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
 }
 
 .name-role {
-  margin-top: 150px;
-  margin-bottom: 50px;
+  margin-top: clamp(6rem, 14vw, 10rem);
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 .role {
-  font-size: 2.25rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1rem, 1.1rem + 0.5vw, 1.75rem);
+  font-weight: 500;
 }
 
 .socials {
+  position: absolute;
+  right: clamp(1rem, 5vw, 10rem);
+  bottom: 0;
+
   display: flex;
-  gap: 1rem;
   flex-direction: column;
   align-items: flex-end;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-right: clamp(1rem, 5vw, 10rem);
+  gap: 1rem;
+
+  a {
+    transition: transform 180ms ease, opacity 180ms ease;
+
+    &:hover {
+      transform: translateX(-4px);
+      opacity: 0.65;
+    }
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+    }
+  }
 }
+
 
 /* ------------------------------
    Projects Section
 ------------------------------ */
+.projects-container {
+  min-height: 100vh;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: clamp(2rem, 2rem + 2vh, 6rem);
+  margin-bottom: clamp(10rem, 2rem + 5vw, 30rem);
+}
+
 .projects-list {
   display: flex;
   gap: clamp(2rem, 1rem + 5vw, 5rem);
-  overflow-x: scroll;
-  white-space: pre-line;
-  /* Hide scrollbars */
+
+  overflow-x: auto;
+
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
 
   &::-webkit-scrollbar {
     display: none;
   }
 
-  & div {
+  p {
     text-align: center;
+    margin-bottom: 1rem;
   }
 }
 
+
 /* ------------------------------
-   Elements
+   Project Images
 ------------------------------ */
 img {
-  aspect-ratio: 1/1;
   display: block;
-  border-radius: 0.3rem;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
 }
 
+
+/* ------------------------------
+   Project CTA
+------------------------------ */
 .view-projects {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.875rem 1.75rem;
+
   background-color: $accent-color;
-  padding: 0.8rem 1.6rem;
-  border: none;
-  border-radius: 5px;
   color: $text-color;
+
+  border: 1px solid hsl(345, 66%, 37%);
+  border-radius: 999px;
+
+  font-weight: 700;
   text-decoration: none;
   cursor: pointer;
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $text-color;
+    outline-offset: 4px;
+  }
 }
 
+
+/* ------------------------------
+   Projects Email
+------------------------------ */
 .email-section-projects {
   display: flex;
+  align-items: center;
   gap: 1rem;
+
   position: absolute;
   left: 0;
-  margin-top: 7rem;
 
+  margin-top: clamp(4rem, 7vw, 7rem);
 
   .line {
+    width: clamp(80px, 10vw, 160px);
     margin-left: 0;
-    width: 196px;
   }
 }
 
 .email-link-projects {
   color: $text-color;
   text-decoration: none;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+
+  &:hover {
+    color: $accent-color;
+    transform: translateX(3px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
 }
 
+
+/* ------------------------------
+   Project Socials
+------------------------------ */
 .projects-socials {
   display: flex;
   gap: 1rem;
+
   position: absolute;
   right: 0;
+
+  a {
+    transition:
+      transform 180ms ease,
+      opacity 180ms ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      opacity: 0.65;
+    }
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+    }
+  }
 }
 
 .projects-socials-line {
@@ -206,30 +319,16 @@ img {
 }
 
 
-.projects-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: clamp(10rem, 2rem + 5vw, 30rem);
-  margin-right: 0;
-  padding-top: clamp(2em, 2em + 2vh, 6em);
-
-}
-
-.projects-container {
-  min-height: 100vh;
-}
-
-.socials-line {
-  margin-top: 0;
-}
-
+/* ------------------------------
+   Responsive
+------------------------------ */
 @media (max-width: 768px) {
-  .email-section {
-    display: none;
-  }
 
-  .socials {
-    margin-right: 20px;
+  .email-section,
+  .socials,
+  .projects-socials,
+  .projects-socials-line,
+  .email-section-projects {
     display: none;
   }
 
@@ -238,26 +337,4 @@ img {
     align-items: flex-start;
     gap: 2rem;
   }
-
-  .projects-socials {
-    position: static;
-    flex-direction: row;
-    margin-top: 2rem;
-    display: none;
-  }
-
-  .projects-socials-line {
-    display: none;
-  }
-
-  .email-section-projects {
-    display: none;
-  }
-}
-
-@media (min-width: 1200px) {
-  .socials {
-    margin-right: clamp(13rem, 10vw, 50rem);
-  }
-
 }
