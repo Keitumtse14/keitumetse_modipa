@@ -23,7 +23,7 @@ export default function Home() {
     },
     {
       name: "Chat App",
-      // href: "https://weather-app-black-seven-30.vercel.app/",
+      href: "https://nexus-chat-brown-iota.vercel.app/",
       src: "/nexus-chat.jpg",
       alt: "Thumbnail of chat App",
     }
