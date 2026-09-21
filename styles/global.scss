@@ -10,7 +10,7 @@
 ------------------------------ */
 $background-color: hsl(218, 58%, 4%);
 $text-color: hsl(210, 20%, 98%);
-$accent-color: hsl(345, 66%, 47%);
+$accent-color: hsl(218, 95%, 55%);
 
 $font-body: "Noto Sans", sans-serif;
 $font-headings: "Be Vietnam Pro", sans-serif;
@@ -117,8 +117,8 @@ p {
   }
 
   &:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
+      outline: 2px solid $accent-color;
+      outline-offset: 4px;
   }
 }
 
@@ -201,6 +201,12 @@ img {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
+
+  transition: filter 180ms ease;
+
+  &:hover {
+    filter: brightness(0.88);
+  }
 }
 
 
@@ -211,36 +217,58 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 
   padding: 0.875rem 1.75rem;
 
   background-color: $accent-color;
   color: $text-color;
 
-  border: 1px solid hsl(345, 66%, 37%);
-  border-radius: 999px;
+  border: 1px solid hsl(218, 70%, 45%);
+  border-radius: 10px;
 
   font-weight: 700;
+  line-height: 1.25;
   text-decoration: none;
   cursor: pointer;
 
   transition:
-    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
     box-shadow 180ms ease,
-    background-color 180ms ease;
+    transform 180ms ease;
 
+  // Hover
   &:hover {
-    transform: translateY(-2px);
+    background-color: hsl(218, 95%, 50%);
+    border-color: hsl(218, 70%, 40%);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
   }
 
+  // Keyboard focus
+  &:focus-visible {
+    outline: 2px solid $accent-color;
+    outline-offset: 4px;
+  }
+
+  // Pressed
   &:active {
+    background-color: hsl(218, 95%, 45%);
+    border-color: hsl(218, 70%, 35%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transform: translateY(0);
   }
 
-  &:focus-visible {
-    outline: 2px solid $text-color;
-    outline-offset: 4px;
+  // Disabled
+  &:disabled,
+  &[aria-disabled="true"] {
+    background-color: hsl(218, 20%, 70%);
+    border-color: hsl(218, 20%, 60%);
+    color: hsl(0, 0%, 95%);
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
   }
 }
 
@@ -250,13 +278,14 @@ img {
 ------------------------------ */
 .email-section-projects {
   display: flex;
-  align-items: center;
+  place-items: center;
+
   gap: 1rem;
 
   position: absolute;
   left: 0;
 
-  margin-top: clamp(4rem, 7vw, 7rem);
+  margin-top: clamp(15rem, 7vw, 7rem);
 
   .line {
     width: clamp(80px, 10vw, 160px);
@@ -278,8 +307,8 @@ img {
   }
 
   &:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
+      outline: 2px solid $accent-color;
+      outline-offset: 4px;
   }
 }
 
@@ -305,8 +334,8 @@ img {
     }
 
     &:focus-visible {
-      outline: 2px solid currentColor;
-      outline-offset: 4px;
+        outline: 2px solid $accent-color;
+        outline-offset: 4px;
     }
   }
 }
