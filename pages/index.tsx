@@ -4,23 +4,29 @@ import Image from "next/image";
 export default function Home() {
   const projects = [
     {
-      name: "Data Structures App",
+      name: "Data Structures ",
       href: "https://dsa-app-tau.vercel.app/",
-      src: "/Data-structures-App-Image.png",
+      src: "/data-structures.jpg",
       alt: "Thumbnail of Data Structures App",
     },
     {
-      name: "Rolling Blackouts App",
-      href: "https://github.com/Keitumtse14/proxy",
-      src: "/Eskom-App-Image.png",
+      name: "Blackouts Tracker",
+      href: "https://rolling-blackouts-app-git-demo-keitumtse14s-projects.vercel.app/",
+      src: "/rolling-blackouts.jpg",
       alt: "Thumbnail of Rolling Blackouts App",
     },
     {
-      name: "Weather App (in progress)",
-      href: "javascript:void(0)",
-      src: "/Weather-App.png",
+      name: "Weather App",
+      href: "https://weather-app-black-seven-30.vercel.app/",
+      src: "/weather-app.jpg",
       alt: "Thumbnail of Weather App",
     },
+    {
+      name: "Chat App",
+      href: "https://nexus-chat-brown-iota.vercel.app/",
+      src: "/nexus-chat.jpg",
+      alt: "Thumbnail of chat App",
+    }
   ];
 
   return (
@@ -36,15 +42,15 @@ export default function Home() {
         <div className="email-section">
           <a
             className="email-link"
-            href="mailto:modipakeitumetse14@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
+            href="mailto:keitumetse.modipa.dev@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
           >
-            modipakeitumetse14@gmail.com
+            keitumetse.modipa.dev@gmail.com
           </a>
           <div className="line"></div>
         </div>
 
         <div className="name-role">
-          <label className="role">Front-End Web Developer</label>
+          <label htmlFor="email-address" className="role">Front-End Web Developer</label>
           <h1>Keitumetse Modipa</h1>
         </div>
 
@@ -55,7 +61,7 @@ export default function Home() {
 
         <div className="socials">
           <a
-            href="https://www.linkedin.com/in/keitumetse-modipa-6b7325264/"
+            href="https://www.linkedin.com/in/keitumetse-modipa-ba11673bb/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -81,19 +87,7 @@ export default function Home() {
               className="svg-size"
             />
           </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=100086403442409"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              width={40}
-              height={40}
-              src="/facebook.svg"
-              alt="Facebook"
-              className="svg-size"
-            />
-          </a>
+
           <div className="socials-line"></div>
         </div>
       </section>
@@ -105,9 +99,11 @@ export default function Home() {
             <h2>Projects</h2>
             <div className="projects-socials">
               <a
-                href="https://www.linkedin.com/in/keitumetse-modipa-6b7325264/"
+                href="https://www.linkedin.com/in/keitumetse-modipa-ba11673bb/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
+
               >
                 <Image
                   width={40}
@@ -130,19 +126,7 @@ export default function Home() {
                   className="svg-size"
                 />
               </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=100086403442409"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  width={40}
-                  height={40}
-                  src="/facebook.svg"
-                  alt="Facebook"
-                  className="svg-size"
-                />
-              </a>
+
               <div className="projects-socials-line"></div>
             </div>
           </header>
@@ -182,9 +166,9 @@ export default function Home() {
             <div className="line"></div>
             <a
               className="email-link-projects"
-              href="mailto:modipakeitumetse14@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
+              href="mailto:keitumetse.modipa.dev@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
             >
-              modipakeitumetse14@gmail.com
+              keitumetse.modipa.dev@gmail.com
             </a>
           </div>
         </div>
